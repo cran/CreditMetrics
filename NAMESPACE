@@ -1,0 +1,2 @@
+export(cm.quantile, cm.cs, cm.ref, cm.rnorm, cm.rnorm.cor, cm.state, cm.val, 
+       cm.portfolio, cm.gain, cm.CVaR, cm.hist, cm.matrix)
