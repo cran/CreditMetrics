@@ -32,7 +32,7 @@ each.
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{matrix}}, \code{\link{rnorm}}}
 

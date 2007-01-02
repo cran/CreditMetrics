@@ -4,7 +4,7 @@
 \title{Computation of simulated profits and losses}
 
 \description{
-\code{cm.gain} computes the profits or losses, this is done by building the
+\code{cm.gain} computes profits or losses, this is done by building the
 difference from the reference value and the simulated portfolio values of the
 credit positions.
 }
@@ -32,12 +32,12 @@ positive, or the losses, if the difference is negative.
 }
 
 \value{
-This functions returns the simulated profits or losses.
+This functions returns simulated profits or losses.
 }
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{cm.matrix}}, \code{\link{cm.ref}}, \code{\link{cm.portfolio}}}
 
@@ -56,7 +56,7 @@ This functions returns the simulated profits or losses.
                   0.6, 0.5,   1), 3, 3, dimnames = list(firmnames, firmnames),
                   byrow = TRUE)
 
-  # one year empirical migration matrix form standard&poors website
+  # one year empirical migration matrix from standard&poors website
   rc <- c("AAA", "AA", "A", "BBB", "BB", "B", "CCC", "D")
   M <- matrix(c(90.81,  8.33,  0.68,  0.06,  0.08,  0.02,  0.01,   0.01,
                  0.70, 90.65,  7.79,  0.64,  0.06,  0.13,  0.02,   0.01,

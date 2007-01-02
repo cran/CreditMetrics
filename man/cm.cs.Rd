@@ -30,7 +30,7 @@ position at time t is computed as
 \deqn{V_0 = E[V_t] e^{-r_t t}}
 The default event is bernoulli distributed, so the expected value is
 \deqn{E[V_t] = V_t (1 - PD_t) + V_t (1 - LGD) PD_t}
-By using the above equations and following transforming we get the formula for
+By using the above equations and following transformation, we get the formula for
 the credit spread
 \deqn{CS_t = - (\ln(1 - LGD PD_t)) / t}
 This function computes the credit spread for t = 1, this is the credit spread for
@@ -43,14 +43,14 @@ Return value is the credit spread for time t = 1 of each rating in the migration
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{cm.matrix}}}
 
 \examples{
   lgd <- 0.45
   
-  # one year empirical migration matrix form standard&poors website
+  # one year empirical migration matrix from standard&poors website
   rc <- c("AAA", "AA", "A", "BBB", "BB", "B", "CCC", "D")
   M <- matrix(c(90.81,  8.33,  0.68,  0.06,  0.08,  0.02,  0.01,   0.01,
                  0.70, 90.65,  7.79,  0.64,  0.06,  0.13,  0.02,   0.01,

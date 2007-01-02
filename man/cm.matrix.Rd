@@ -4,9 +4,9 @@
 \title{Testing for migration matrix}
 
 \description{
-\code{cm.matrix} tests if the given matrix \code{M} is a migration matrix. This
-is the dimensions of the migration matrix should be at least 2 times 2 and the
-row and column dimension must be equal. Further the values in the migration
+\code{cm.matrix} tests if the given matrix \code{M} is a migration matrix. So 
+the dimensions of the migration matrix should be at least 2 times 2 and the
+row and column dimensions must be equal. Further the values in the migration
 matrix should be between 0 and 1. And the sum of each row should be 1.
 }
 
@@ -26,12 +26,12 @@ above attributes.
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{is.matrix}}}
 
 \examples{
-  # one year empirical migration matrix form standard&poors website
+  # one year empirical migration matrix from standard&poors website
   rc <- c("AAA", "AA", "A", "BBB", "BB", "B", "CCC", "D")  
   M <- matrix(c(90.81,  8.33,  0.68,  0.06,  0.08,  0.02,  0.01,   0.01,
                  0.70, 90.65,  7.79,  0.64,  0.06,  0.13,  0.02,   0.01,

@@ -6,7 +6,7 @@
 \description{
 \code{cm.rnorm.cor} computes correlated standard normal distributed random numbers.
 This function uses a correlation matrix \code{rho} and later the cholesky
-decompositon in order to get the correlated random numbers.
+decompositon in order to get correlated random numbers.
 }
 
 \usage{
@@ -20,22 +20,22 @@ cm.rnorm.cor(N, n, rho)
 }
 
 \details{
-This function computes standard normal distributed random numbers which include
+This function computes standard normal distributed random numbers, which include
 the correlation matrix \code{rho}. One has a random matrix \eqn{Y} which is
 \eqn{N(0,1)} distributed. With the linear transformation \eqn{X = \mu + A Y}
-one gets \eqn{X} is \eqn{N(\mu, A A^T)} distributed. If \eqn{X} should have
-the correlation matrix \eqn{\Sigma}. By using the cholesky decomposition the
-matrix \eqn{A} can be computed from \eqn{\Sigma}.
+one gets \eqn{X}, which is \eqn{N(\mu, A A^T)} distributed. If \eqn{X} should 
+have the correlation matrix \eqn{\Sigma}. By using the cholesky decomposition 
+the matrix \eqn{A} can be computed from \eqn{\Sigma}.
 }
 
 \value{
 The function returns \code{N} simulations with \code{n} simulated random numbers
-each which include the correlation matrix \code{rho}.
+each, which include the correlation matrix \code{rho}.
 }
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{eigen}}, \code{\link{chol}}, \code{\link{cm.rnorm}}}
 

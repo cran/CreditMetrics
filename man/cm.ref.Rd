@@ -36,7 +36,7 @@ a list containing following components:
 
 \references{ Glasserman, Paul, Monte Carlo Methods in Financial Engineering, Springer 2004 }
 
-\author{ Andreas Wittmann \email{andreas\_wittmann@gmx.de}}}
+\author{Andreas Wittmann \email{andreas\_wittmann@gmx.de}}
 
 \seealso{\code{\link{cm.matrix}}, \code{\link{cm.cs}}}
 
@@ -46,7 +46,7 @@ a list containing following components:
   rating <- c("BBB", "AA", "B")
   lgd <- 0.45
 
-  # one year empirical migration matrix form standard&poors website
+  # one year empirical migration matrix from standard&poors website
   rc <- c("AAA", "AA", "A", "BBB", "BB", "B", "CCC", "D")
   M <- matrix(c(90.81,  8.33,  0.68,  0.06,  0.08,  0.02,  0.01,   0.01,
                  0.70, 90.65,  7.79,  0.64,  0.06,  0.13,  0.02,   0.01,

@@ -38,7 +38,7 @@
     cumMPRev <- t(apply(mpRev, 1, cumsum))
     q <- qnorm(cumMPRev)
     
-    # Adding of the negative threshold
+    # Adding of negative threshold
     q <- cbind(-Inf, q)
 
     return(q)
@@ -117,7 +117,7 @@
 }
 
 
-# Computation of the state space: the state space is computed at time t = 1, 
+# Computation of state space: the state space is computed at time t = 1, 
 # that is credit positions of each company and for each migration
 
 "cm.state" <- function(M, lgd, ead, N, r)
@@ -141,7 +141,7 @@
 }
 
 
-# Valuation for the credit positions of each scenario
+# Valuation of credit positions of each scenario
 
 "cm.val" <- function(M, lgd, ead, N, n, r, rho, rating)
 {
@@ -158,14 +158,14 @@
     
     # Allocation in rating classes and identification of each credit position
     V <- cm.state(M, lgd, ead, N, r)
-    simV <- NULL
+    simV <- matrix(0,N,n)
     q <- cm.quantile(M)
     Y <- cm.rnorm.cor(N, n, rho)
     for (i in 1:N) {
         l <- q[rating[i], ]
-        simClasses <- as.numeric(cut(Y[i,], l))
+        simClasses <- findInterval(Y[i, ], l)
         simClasses <- (simClasses - (dim(M)[1] + 1)) * (-1)
-        simV <- rbind(simV, V[i, simClasses])
+        simV[i,] <- V[i,simClasses]
     }
 
     return(simV) 
